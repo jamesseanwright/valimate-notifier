@@ -3,7 +3,9 @@
 const VALIDATION_MODE = 'validationMode';
 
 module.exports = function notifyValimate(isRunning) {
-	if (process.argv.includes(VALIDATION_MODE)) {
+	const isValidating = process.argv.indexOf(VALIDATION_MODE) > -1;
+	
+	if (isValidating) {
 		process.send(isRunning);
 	}
 }
