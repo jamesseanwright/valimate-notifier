@@ -8,4 +8,4 @@ module.exports = function notifyValimate(isRunning) {
 	if (isValidating) {
 		process.send(isRunning);
 	}
-}
+};
